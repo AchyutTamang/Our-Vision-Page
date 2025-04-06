@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Gautam | Bassist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2d4134",
+              secondary: "#f8d448",
+              dark: "#1a2a20",
+              light: "#e9e5d6",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              mono: ["Space Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #2d4134;
+        color: #e9e5d6;
+        overflow-x: hidden;
+      }
+      .grid-lines {
+        background-image: linear-gradient(
+            to right,
+            rgba(233, 229, 214, 0.1) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(233, 229, 214, 0.1) 1px,
+            transparent 1px
+          );
+        background-size: 50px 50px;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .fade-in.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .scale-in {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .scale-in.appear {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .slide-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .slide-in-right.appear {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .slide-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+      .slide-in-left.appear {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .image-container {
+        position: relative;
+        overflow: hidden;
+      }
+      .image-container img {
+        transition: transform 0.5s ease;
+      }
+      .image-container:hover img {
+        transform: scale(1.05);
+      }
+      .signature {
+        font-family: "Brush Script MT", cursive;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <div class="grid-lines min-h-screen">
+      <!-- Hero Section -->
+      <header class="relative h-screen flex items-center">
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+              <div
+                class="image-container rounded-full overflow-hidden border-4 border-secondary w-64 h-64 md:w-80 md:h-80 mx-auto"
+              >
+                <img
+                  src="david1.jpg"
+                  alt="David Gautam"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+              <h1 class="text-5xl md:text-7xl font-mono font-bold mb-4 fade-in">
+                DAVID<br />GAUTAM
+              </h1>
+              <div
+                class="w-24 h-1 bg-secondary mx-auto md:mx-0 mb-6 fade-in"
+                style="animation-delay: 0.2s"
+              ></div>
+              <p class="text-xl fade-in" style="animation-delay: 0.4s">
+                Bassist • Educator • Storyteller
+              </p>
+              <div class="mt-8 fade-in" style="animation-delay: 0.6s">
+                <span class="signature text-secondary text-3xl">David</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center"
+        >
+          <a href="#about" class="text-light animate-bounce block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8 mx-auto"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+            <span class="text-sm">Scroll to explore</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- About Section -->
+      <section id="about" class="py-20">
+        <div class="container mx-auto px-6 md:px-12">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+              <div class="relative">
+                <div class="image-container rounded-lg overflow-hidden">
+                  <img
+                    src="david2.jpg"
+                    alt="David Gautam performing"
+                    class="w-full h-auto"
+                  />
+                </div>
+                <div
+                  class="absolute -bottom-6 -right-6 bg-secondary text-dark p-4 rounded-lg fade-in"
+                  style="animation-delay: 0.3s"
+                >
+                  <p class="font-mono text-sm">Music with a Purpose</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="md:w-1/2 md:pl-16 fade-in"
+              style="animation-delay: 0.3s"
+            >
+              <h2 class="text-4xl font-mono font-bold mb-8 relative">
+                <span class="text-secondary">//</span> ABOUT DAVID
+                <div
+                  class="w-16 h-1 bg-secondary absolute -bottom-2 left-0"
+                ></div>
+              </h2>
+              <div class="space-y-4 text-light">
+                <p>
+                  Bass isn't just an instrument for David Gautam—it's a gateway
+                  to storytelling, connection, and transformation. As a Bachelor
+                  of Music graduate and a master's in educational leadership
+                  student, David's passion extends beyond the stage, where he
+                  researches "Sound Perception and Musicality" to bridge the gap
+                  between music and learning.
+                </p>
+
+                <p>
+                  From his early days at Nepal Music School to making history at
+                  the Sydney Opera House, David has carved a path as a dynamic
+                  performer and educator. Whether holding down deep grooves on
+                  electric bass or exploring the expressive landscapes of
+                  fretless and double bass, his playing is the foundation of
+                  every musical experience.
+                </p>
+
+                <p>
+                  Guided by the philosophy of "Music with a Purpose," David's
+                  work with SoulCity Foundation and his experience with young
+                  learners reflect his belief in music as a force for change.
+                  With over 50 session recordings and significant performances
+                  across Sydney, his artistry continues to evolve and inspire.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="py-20 bg-dark">
+        <div class="container mx-auto px-6 md:px-12">
+          <h2
+            class="text-4xl font-mono font-bold mb-16 text-center relative fade-in"
+          >
+            <span class="text-secondary">//</span> PERFORMANCE GALLERY
+            <div
+              class="w-24 h-1 bg-secondary absolute -bottom-2 left-1/2 transform -translate-x-1/2"
+            ></div>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="image-container rounded-lg overflow-hidden scale-in"
+              style="animation-delay: 0.1s"
+            >
+              <img
+                src="david3.jpg"
+                alt="David Gautam performance"
+                class="w-full h-80 object-cover"
+              />
+            </div>
+            <div
+              class="image-container rounded-lg overflow-hidden scale-in"
+              style="animation-delay: 0.2s"
+            >
+              <img
+                src="david4.jpg"
+                alt="David Gautam performance"
+                class="w-full h-80 object-cover"
+              />
+            </div>
+            <div
+              class="image-container rounded-lg overflow-hidden scale-in"
+              style="animation-delay: 0.3s"
+            >
+              <img
+                src="david5.jpg"
+                alt="David Gautam performance"
+                class="w-full h-80 object-cover"
+              />
+            </div>
+            <div
+              class="image-container rounded-lg overflow-hidden scale-in md:col-span-2"
+              style="animation-delay: 0.4s"
+            >
+              <img
+                src="david6.jpg"
+                alt="David Gautam performance"
+                class="w-full h-80 object-cover"
+              />
+            </div>
+            <div
+              class="image-container rounded-lg overflow-hidden scale-in"
+              style="animation-delay: 0.5s"
+            >
+              <video controls class="w-full h-80 object-cover">
+                <source src="david_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="py-20">
+        <div class="container mx-auto px-6 md:px-12">
+          <h2
+            class="text-4xl font-mono font-bold mb-16 text-center relative fade-in"
+          >
+            <span class="text-secondary">//</span> MUSICAL JOURNEY
+            <div
+              class="w-24 h-1 bg-secondary absolute -bottom-2 left-1/2 transform -translate-x-1/2"
+            ></div>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="fade-in" style="animation-delay: 0.2s">
+              <h3 class="text-2xl font-mono mb-6 text-secondary">EDUCATION</h3>
+              <div class="space-y-6">
+                <div class="p-6 bg-dark rounded-lg border-l-4 border-secondary">
+                  <h4 class="text-xl font-semibold mb-2">
+                    Master's in Educational Leadership
+                  </h4>
+                  <p class="text-light opacity-75 mb-2">Current</p>
+                  <p class="text-light">
+                    Researching "Sound Perception and Musicality" to bridge the
+                    gap between music and learning.
+                  </p>
+                </div>
+                <div class="p-6 bg-dark rounded-lg border-l-4 border-secondary">
+                  <h4 class="text-xl font-semibold mb-2">Bachelor of Music</h4>
+                  <p class="text-light opacity-75 mb-2">Graduated</p>
+                  <p class="text-light">
+                    Specialized in bass performance with honors.
+                  </p>
+                </div>
+                <div class="p-6 bg-dark rounded-lg border-l-4 border-secondary">
+                  <h4 class="text-xl font-semibold mb-2">Nepal Music School</h4>
+                  <p class="text-light opacity-75 mb-2">Early Education</p>
+                  <p class="text-light">
+                    Foundational training in music theory and performance.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="fade-in" style="animation-delay: 0.4s">
+              <h3 class="text-2xl font-mono mb-6 text-secondary">
+                ACHIEVEMENTS
+              </h3>
+              <div class="space-y-6">
+                <div class="p-6 bg-dark rounded-lg border-l-4 border-secondary">
+                  <h4 class="text-xl font-semibold mb-2">Sydney Opera House</h4>
+                  <p class="text-light opacity-75 mb-2">Historic Performance</p>
+                  <p class="text-light">
+                    Made history as one of the first Nepalese musicians to
+                    perform at this iconic venue.
+                  </p>
+                </div>
+                <div class="p-6 bg-dark rounded-lg border-l-4 border-secondary">
+                  <h4 class="text-xl font-semibold mb-2">Session Musician</h4>
+                  <p class="text-light opacity-75 mb-2">Professional Work</p>
+                  <p class="text-light">
+                    Contributed to over 50 studio recordings across various
+                    genres.
+                  </p>
+                </div>
+                <div class="p-6 bg-dark rounded-lg border-l-4 border-secondary">
+                  <h4 class="text-xl font-semibold mb-2">
+                    SoulCity Foundation
+                  </h4>
+                  <p class="text-light opacity-75 mb-2">Community Impact</p>
+                  <p class="text-light">
+                    Using music as a force for positive social change through
+                    educational programs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="py-20 bg-dark">
+        <div class="container mx-auto px-6 md:px-12">
+          <h2
+            class="text-4xl font-mono font-bold mb-16 text-center relative fade-in"
+          >
+            <span class="text-secondary">//</span> MUSICAL EXPERTISE
+            <div
+              class="w-24 h-1 bg-secondary absolute -bottom-2 left-1/2 transform -translate-x-1/2"
+            ></div>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="p-8 border border-secondary rounded-lg text-center fade-in"
+              style="animation-delay: 0.1s"
+            >
+              <div
+                class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-dark"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Electric Bass</h3>
+              <p class="text-light">
+                Mastery of groove, tone, and technique across multiple genres
+                including jazz, funk, and rock.
+              </p>
+            </div>
+
+            <div
+              class="p-8 border border-secondary rounded-lg text-center fade-in"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-dark"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Fretless & Double Bass</h3>
+              <p class="text-light">
+                Exploring expressive landscapes with nuanced intonation and
+                phrasing in jazz and classical contexts.
+              </p>
+            </div>
+
+            <div
+              class="p-8 border border-secondary rounded-lg text-center fade-in"
+              style="animation-delay: 0.3s"
+            >
+              <div
+                class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-10 w-10 text-dark"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Music Education</h3>
+              <p class="text-light">
+                Developing innovative teaching methodologies that connect theory
+                with practice for students of all ages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy Section -->
+      <section class="py-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-mono font-bold mb-8 fade-in">
+              <span class="text-secondary">//</span> MUSICAL PHILOSOPHY
+            </h2>
+            <div
+              class="text-5xl md:text-6xl font-light italic mb-8 fade-in"
+              style="animation-delay: 0.2s"
+            >
+              "Music with a Purpose"
+            </div>
+            <p class="text-xl fade-in" style="animation-delay: 0.4s">
+              David believes that music is more than entertainment—it's a
+              powerful force for connection, education, and positive change in
+              communities around the world.
+            </p>
+          </div>
+        </div>
+        <div
+          class="absolute -right-20 top-1/2 transform -translate-y-1/2 opacity-10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="400"
+            height="400"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="0.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-8 bg-dark text-center">
+        <div class="container mx-auto px-6">
+          <p class="text-light opacity-75">
+            © 2023 David Gautam. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Intersection Observer for scroll animations
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(
+          ".fade-in, .scale-in, .slide-in-right, .slide-in-left"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        fadeElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

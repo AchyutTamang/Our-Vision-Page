@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agaman Bishwokarma | Vocalist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e20878',
+                        secondary: '#f8e5ee',
+                        dark: '#333333',
+                        light: '#ffffff'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            overflow-x: hidden;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .scale-in.appear {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .slide-in-right.appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .slide-in-left.appear {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .image-container img {
+            transition: transform 0.5s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #e20878, #ff6eb4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-blur {
+            backdrop-filter: blur(8px);
+        }
+        .vinyl-spin {
+            animation: spin 20s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="min-h-screen">
+        <!-- Hero Section -->
+        <header class="relative h-screen flex items-center">
+            <div class="absolute inset-0 z-0">
+                <div class="h-full w-full bg-gradient-to-b from-secondary/30 to-white"></div>
+            </div>
+            <div class="container mx-auto px-6 md:px-12 relative z-10">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-12 md:mb-0">
+                        <div class="image-container rounded-full overflow-hidden border-4 border-primary w-64 h-64 md:w-80 md:h-80 mx-auto relative">
+                            <img src="agaman3.webp" alt="Agaman Bishwokarma" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-primary/10 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <div class="vinyl-spin">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" class="text-white">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="text-5xl md:text-7xl font-serif font-bold mb-4 fade-in">
+                            <span class="text-primary">A</span>GAMAN
+                        </h1>
+                        <div class="w-24 h-1 bg-primary mx-auto md:mx-0 mb-6 fade-in" style="animation-delay: 0.2s;"></div>
+                        <p class="text-xl fade-in" style="animation-delay: 0.4s;">Vocalist • Songwriter • Vocal Tutor</p>
+                        <div class="mt-8 fade-in" style="animation-delay: 0.6s;">
+                            <p class="text-gray-600 italic">"Music is the language of emotions that words cannot express"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+                <a href="#about" class="text-primary animate-bounce block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                    <span class="text-sm">Discover Agaman</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                        <div class="relative">
+                            <div class="image-container rounded-lg overflow-hidden">
+                                <img src="agaman4.webp" alt="Agaman Bishwokarma performing" class="w-full h-auto">
+                            </div>
+                            <div class="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg fade-in" style="animation-delay: 0.3s;">
+                                <p class="font-serif text-sm">Captivating Performances</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-16 fade-in" style="animation-delay: 0.3s;">
+                        <h2 class="text-4xl font-serif font-bold mb-8 relative">
+                            <span class="text-primary">The</span> Artist
+                            <div class="w-16 h-1 bg-primary absolute -bottom-2 left-0"></div>
+                        </h2>
+                        <div class="space-y-4 text-gray-700">
+                            <p>Agaman Bishwokarma is a talented contemporary singer, songwriter, and experienced vocal tutor known for his captivating performances and dedication to vocal education. With a bachelor's degree in music performance, Agaman seamlessly blends technical expertise with artistic expression, creating music that resonates deeply with his audience.</p>
+                            
+                            <p>As a singer-songwriter, Agaman crafts heartfelt compositions that reflect his unique perspective and emotional depth. His evocative lyrics and dynamic vocal delivery connect with listeners. His versatility shines across a range of contemporary styles, making him a standout artist in the modern music landscape.</p>
+                            
+                            <p>With a commitment to artistry and education, Agaman Bishwokarma continues to leave a lasting impact on the music community as a performer and mentor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-20 bg-secondary">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-4xl font-serif font-bold mb-16 text-center relative fade-in">
+                    <span class="text-primary">Visual</span> Journey
+                    <div class="w-24 h-1 bg-primary absolute -bottom-2 left-1/2 transform -translate-x-1/2"></div>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="image-container rounded-lg overflow-hidden scale-in md:col-span-4" style="animation-delay: 0.1s;">
+                        <img src="agaman1.webp" alt="Agaman Bishwokarma" class="w-full h-96 object-cover">
+                    </div>
+                    <div class="image-container rounded-lg overflow-hidden scale-in md:col-span-8" style="animation-delay: 0.2s;">
+                        <img src="agaman4.webp" alt="Agaman Bishwokarma performance" class="w-full h-96 object-cover">
+                    </div>
+                    <div class="image-container rounded-lg overflow-hidden scale-in md:col-span-8" style="animation-delay: 0.3s;">
+                        <video controls class="w-full h-96 object-cover">
+                            <source src="agaman_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="image-container rounded-lg overflow-hidden scale-in md:col-span-4" style="animation-delay: 0.4s;">
+                        <img src="agaman.2.webp" alt="Agaman Bishwokarma" class="w-full h-96 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Philosophy Section -->
+        <section class="py-20 relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="h-full w-full bg-gradient-to-b from-white to-secondary/30"></div>
+            </div>
+            <div class="container mx-auto px-6 md:px-12 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl font-serif font-bold mb-8 fade-in">
+                        <span class="text-primary">Musical</span> Philosophy
+                    </h2>
+                    <div class="text-5xl md:text-6xl font-light italic mb-8 fade-in" style="animation-delay: 0.2s;">
+                        "The Voice as an Instrument"
+                    </div>
+                    <p class="text-xl text-gray-700 fade-in" style="animation-delay: 0.4s;">
+                        Agaman believes that the human voice is the most expressive instrument, capable of conveying emotions 
+                        that resonate universally. His approach to music centers on authenticity and emotional connection.
+                    </p>
+                </div>
+            </div>
+            <div class="absolute -right-20 top-1/2 transform -translate-y-1/2 opacity-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18V5l12-2v13"></path>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="16" r="3"></circle>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section class="py-20 bg-secondary">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-4xl font-serif font-bold mb-16 text-center relative fade-in">
+                    <span class="text-primary">Vocal</span> Education
+                    <div class="w-24 h-1 bg-primary absolute -bottom-2 left-1/2 transform -translate-x-1/2"></div>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-white shadow-lg rounded-lg text-center fade-in" style="animation-delay: 0.1s;">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Vocal Technique</h3>
+                        <p class="text-gray-700">Mastery of breath control, pitch accuracy, and vocal health for sustainable performance and expression.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-white shadow-lg rounded-lg text-center fade-in" style="animation-delay: 0.2s;">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Performance Skills</h3>
+                        <p class="text-gray-700">Developing stage presence, emotional delivery, and audience connection for impactful performances.</p>
+                    </div>
+                    
+                    <div class="p-8 bg-white shadow-lg rounded-lg text-center fade-in" style="animation-delay: 0.3s;">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Creative Expression</h3>
+                        <p class="text-gray-700">Nurturing each student's unique voice and artistic identity through personalized guidance and mentorship.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center fade-in" style="animation-delay: 0.4s;">
+                    <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                        As a vocal tutor, Agaman is passionate about empowering his students to discover their voices. 
+                        His personalized approach fosters confidence and growth, inspiring aspiring vocalists to reach their full potential.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discography Section -->
+        <!-- <section class="py-20">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-4xl font-serif font-bold mb-16 text-center relative fade-in">
+                    <span class="text-primary">Featured</span> Works
+                    <div class="w-24 h-1 bg-primary absolute -bottom-2 left-1/2 transform -translate-x-1/2"></div>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg scale-in" style="animation-delay: 0.1s;">
+                        <div class="image-container h-64">
+                            <img src="agaman1.jpg" alt="Album Cover" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Echoes of the Heart</h3>
+                            <p class="text-gray-600 mb-4">2023 • Single</p>
+                            <p class="text-gray-700 mb-4">A soulful ballad exploring themes of love and connection.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">Listen Now</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg scale-in" style="animation-delay: 0.2s;">
+                        <div class="image-container h-64">
+                            <img src="agaman3.jpg" alt="Album Cover" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Urban Rhythms</h3>
+                            <p class="text-gray-600 mb-4">2022 • EP</p>
+                            <p class="text-gray-700 mb-4">A collection of contemporary tracks blending various influences.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">Listen Now</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg scale-in" style="animation-delay: 0.3s;">
+                        <div class="image-container h-64">
+                            <img src="agaman4.jpg" alt="Album Cover" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Acoustic Sessions</h3>
+                            <p class="text-gray-600 mb-4">2021 • Live Album</p>
+                            <p class="text-gray-700 mb-4">Intimate performances showcasing vocal prowess and raw emotion.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-primary font-semibold">Listen Now</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Quote Section -->
+        <section class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="max-w-4xl mx-auto text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-6 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                    </svg>
+                    <p class="text-2xl md:text-3xl font-serif italic mb-8 fade-in">
+                        "I believe that every voice has a unique story to tell. My mission is to help singers discover their authentic sound and use it to create meaningful connections through music."
+                    </p>
+                    <p class="text-xl font-semibold fade-in" style="animation-delay: 0.3s;">— Agaman Bishwokarma</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <!-- <footer class="py-8 bg-secondary text-center">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-primary hover:text-primary/80 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-primary hover:text-primary/80 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-primary hover:text-primary/80 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                    </a>
+                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385h-4v4h4v12h9.75c.69 0 1.25-.56 1.25-1.25v-21.5c0-.69-.56-1.25-1.25-1.25h-21.5c-.69 0-1.25.56-1.25 1.25v21.5c0 .69.56 1.25 1.25 1.25h3.25v-12h-4v-4h4v-3.385c0-3.032 1.596-4.615 5.192-4.615h3.808v5h-2.885c-.923 0-1.115.378-1.115 1.333v1.667h4l-.358 4h-3.642v12h7.75c.69 0 1.25-.56 1.25-1.25v-21.5c0-.69-.56-1.25-1.25-1.25h-21.5c-.69 0-1.25.56-1.25 1.25v21.5c0 .69.56 1.25 1.25 1.25z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-black opacity-75">© 2023 Agaman Bishwokarma. All rights reserved.</p>
+            </div>
+        </footer> -->
+    </div>
+
+    <script>
+        // Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in, .scale-in, .slide-in-right, .slide-in-left');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
